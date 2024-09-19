@@ -68,28 +68,43 @@
 		display: grid;
 		grid-template-columns: minmax(240px, 10vw) auto minmax(240px, 10vw);
 		background-color: #222;
-		background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23229799' fill-opacity='0.32'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-	}
 
-	@media (max-width: 1100px) {
-		#main {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23229799' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+
+		.left,
+		.right {
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+
+		.center {
+			padding-inline: 4rem;
+			padding-bottom: 60px; // this should follow the margin-top of h1 defined at global.scss
+			background-color: #00000030;
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(4px);
+		}
+
+		@media (prefers-color-scheme: light) {
+			background-color: #fff;
+
+			.center {
+				background-color: rgba(0, 0, 0, 0.05);
+				backdrop-filter: blur(8px);
+				-webkit-backdrop-filter: blur(8px);
+			}
+
+			.left,
+			.right {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+		}
+
+		@media (max-width: 1100px) {
 			grid-template-columns: 0 auto 0;
+
+			.center {
+				padding-inline: 2rem;
+			}
 		}
-
-		#main .center {
-			padding-inline: 2rem;
-		}
-	}
-
-	#main .left,
-	#main .right {
-		background-color: rgba(0, 0, 0, 0.2);
-	}
-
-	#main .center {
-		padding-inline: 4rem;
-		background-color: #00000030;
-		backdrop-filter: blur(4px);
-		overflow-y: auto;
 	}
 </style>
