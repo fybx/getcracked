@@ -29,7 +29,10 @@
 	<img src={author.imageUrl} alt="{author.name}'s image" crossorigin="anonymous" />
 	<div class="author-info">
 		<h1>{author.name}</h1>
-		<p>Has {!author.postCount ? 0 : author.postCount} articles.</p>
+		<p>
+			Has {author.postCount ? author.postCount : 0}
+			{author.postCount === 1 ? 'article' : 'articles'}.
+		</p>
 		{#if author.links}
 			<nav>
 				{#each links as [key, value]}
@@ -62,11 +65,12 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			row-gap: 0.25rem;
 			flex: 1;
 
 			h1 {
+				margin: 0;
 				font-size: 1.2rem;
-				margin: 0 0 0.25rem 0;
 			}
 
 			p {

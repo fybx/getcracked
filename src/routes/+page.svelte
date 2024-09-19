@@ -8,4 +8,6 @@
 	<title>{siteTitle}</title>
 </svelte:head>
 
-<svelte:component this={data.index} />
+<article class="markdown">
+	<svelte:component this={data.index} />
+</article>

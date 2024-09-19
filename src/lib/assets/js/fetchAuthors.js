@@ -1,6 +1,8 @@
 import fetchPosts from '$lib/assets/js/fetchPosts';
 import { siteURL } from '$lib/config.js';
 
+const baseUrl = import.meta.env.VITE_BASE_URL;
+
 async function sha256(message) {
   const msgBuffer = new TextEncoder().encode(message);
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
@@ -26,7 +28,7 @@ const fetchAuthors = async () => {
         const hash = await sha256(a.links.email.trim().toLowerCase());
         a.imageUrl = `https://gravatar.com/avatar/${hash}`;
       } else if (!a.imageUrl) {
-        a.imageUrl = `https://${siteURL}/ui/default_user.svg`;
+        a.imageUrl = `${baseUrl}/ui/default_user.svg`;
       }
     })
   )

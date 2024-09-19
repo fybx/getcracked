@@ -27,6 +27,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
     prerender: {
+      handleHttpError: 'warn',
       entries: [
         '*',
         '/api/posts/page/*',

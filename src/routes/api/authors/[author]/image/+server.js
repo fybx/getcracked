@@ -1,6 +1,8 @@
 import fetchAuthors from '$lib/assets/js/fetchAuthors';
 import { error } from '@sveltejs/kit';
 
+export const prerender = true;
+
 export const GET = async ({ params }) => {
   const { author } = params;
   const authors = (await fetchAuthors()).authors;

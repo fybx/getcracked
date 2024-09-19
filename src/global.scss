@@ -78,49 +78,52 @@ $c-line-height: 1.5;
 $base-font-size: 20px;
 $font-size-decrease: 4px;
 
-@for $i from 1 through 6 {
-  h#{$i} {
-    $size: $base-font-size + (6 - $i) * $font-size-decrease;
-    font-size: $size;
-    margin-top: $size * 1.5;
-    margin-bottom: $size;
+#main .markdown {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      $size: $base-font-size + (6 - $i) * $font-size-decrease;
+      font-size: $size;
+      margin-top: $size * 1.5;
+      margin-bottom: $size;
 
-    @if $i <3 {
-      font-weight: 700;
-    }
+      @if $i <3 {
+        font-weight: 700;
+      }
 
-    @else if $i >=3 and $i < 5 {
-      font-weight: 500;
-    }
+      @else if $i >=3 and $i < 5 {
+        font-weight: 500;
+      }
 
-    @else {
-      font-weight: 400;
+      @else {
+        font-weight: 400;
+      }
     }
   }
-}
 
-p {
-  line-height: $base-font-size * $c-line-height;
-  font-size: $base-font-size;
-}
-
-ol,
-ul {
-  line-height: 18px * $c-line-height;
-  font-size: 18px;
-}
-
-blockquote {
-  margin: 0;
-  padding: 0.25rem 0 0.25rem 1.5rem;
-  border-left: 1px solid #229799;
-}
-
-#main .center a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-
-  &:hover {
-    color: #48CFCB;
+  p {
+    line-height: $base-font-size * $c-line-height;
+    font-size: $base-font-size;
   }
+
+  ol,
+  ul {
+    line-height: 18px * $c-line-height;
+    font-size: 18px;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    border-left: 1px solid #229799;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: #48CFCB;
+    }
+  }
+
 }
