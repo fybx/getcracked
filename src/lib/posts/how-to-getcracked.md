@@ -5,6 +5,9 @@ author: "yigid balaban"
 categories:
  - "meta"
  - "markdown"
+coverImage: "/images/how-to-getcracked.png"
+coverWidth: 16
+coverHeight: 9
 excerpt: This post demonstrates the capabilities of getcracked.wiki.
 ---
 
