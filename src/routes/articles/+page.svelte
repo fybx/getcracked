@@ -6,11 +6,13 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Articles</title>
 	<meta data-key="description" name="description" content="TODO: update here" />
 </svelte:head>
 
 <h1>Articles</h1>
+
+<p>All articles, sorted by the freshest.</p>
 
 <div class="container">
 	<div class="left">
