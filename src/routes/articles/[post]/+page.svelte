@@ -16,14 +16,12 @@
 		day: 'numeric'
 	});
 
-	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } =
-		data.meta;
+	const { title, excerpt, coverWidth, coverHeight, categories } = data.meta;
 	const { PostContent } = data;
 </script>
 
 <svelte:head>
-	<!-- Be sure to add your image files and un-comment the lines below -->
-	<title>{title}</title>
+	<title>{post.title} getcracked</title>
 	<meta data-key="description" name="description" content={excerpt} />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={title} />
@@ -34,16 +32,19 @@
 	<meta property="og:image:width" content={coverWidth} />
 	<meta property="og:image:height" content={coverHeight} />
 	<!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
+
+	<link rel="stylesheet" href="/css/prism-one-light.css" media="(prefers-color-scheme: light)" />
+	<link rel="stylesheet" href="/css/prism-one-dark.css" media="(prefers-color-scheme: dark)" />
 </svelte:head>
 
 <article class="markdown">
-	{#if !post.dontCover}
+	{#if !post.dontCover && post.coverImage}
 		<center
 			><img
 				class="cover-image"
-				src={coverImage}
-				alt=""
-				style="aspect-ratio: {coverWidth} / {coverHeight};"
+				src={post.coverImage}
+				alt="Cover image of post {post.title}"
+				style="aspect-ratio: {post.coverWidth} / {post.coverHeight};"
 			/></center
 		>
 	{/if}
@@ -52,14 +53,14 @@
 
 	<div class="meta">
 		<div class="row0">
-			{#each post.author as author}
+			{#each Array.isArray(post.author) ? post.author : [post.author] as author}
 				<img
 					class="author-image"
 					src="/api/authors/{author}/image"
 					alt="{author}'s profile image"
 				/>
 			{/each}
-			{#each post.author as author}
+			{#each Array.isArray(post.author) ? post.author : [post.author] as author}
 				<p>{author}</p>
 			{/each}
 		</div>

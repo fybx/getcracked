@@ -4,8 +4,6 @@
 	let uniqueCategories;
 	let maxCount;
 
-	console.log(data);
-
 	if (heatmap) {
 		uniqueCategories = data.uniqueCategories;
 		maxCount = Math.max(...uniqueCategories.map((category) => category.count));

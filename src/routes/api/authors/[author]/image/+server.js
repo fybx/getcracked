@@ -8,9 +8,6 @@ export const GET = async ({ params }) => {
   const authors = (await fetchAuthors()).authors;
   const authorData = authors.find(a => a.name === author);
  
-  console.log(authorData);
-
-
   if (!authorData) {
     throw error(404, 'Author not found');
   }
