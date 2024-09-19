@@ -2,6 +2,7 @@
 title: "Syntax highlighting with mdsvex"
 date: "2023-01-05"
 updated: "2023-01-05"
+author: "yigid balaban"
 categories:
   - "sveltekit"
   - "web"

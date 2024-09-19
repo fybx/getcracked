@@ -2,6 +2,9 @@
 title: "A Markdown post with a callout"
 date: "2024-09-19"
 updated: "2024-09-19"
+author: 
+ - "yigid balaban"
+ - "there is another"
 categories:
   - "meta"
   - "markdown"

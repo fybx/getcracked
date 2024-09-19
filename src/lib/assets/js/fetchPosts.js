@@ -1,17 +1,22 @@
 import { postsPerPage } from '$lib/config'
 
-const fetchPosts = async ({ offset = 0, limit = postsPerPage, tag = '' } = {}) => {
+const fetchPosts = async ({ offset = 0, limit = postsPerPage, byAuthor = '', tag = '' } = {}) => {
 
 	const posts = await Promise.all(
 		Object.entries(import.meta.glob('/src/lib/posts/*.md')).map(async ([path, resolver]) => {
 			const { metadata } = await resolver()
 			const slug = path.split('/').pop().slice(0, -3)
-			return { ...metadata, slug }
+      metadata.author = (typeof metadata.author === 'string') ? [ metadata.author ] : [ ...metadata.author ];
+      return { ...metadata, slug }
 		})
 	)
 
 	let sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
 	
+  if (byAuthor) {
+    sortedPosts = sortedPosts.filter(post => post.author.includes(byAuthor))
+  }
+
 	if (tag) {
     sortedPosts = sortedPosts.filter(post => post.categories.includes(tag))
 	}
@@ -25,7 +30,8 @@ const fetchPosts = async ({ offset = 0, limit = postsPerPage, tag = '' } = {}) =
 	}
 
 	sortedPosts = sortedPosts.map(post => ({
-		title: post.title,
+		author: post.author,
+    title: post.title,
 		slug: post.slug,
 		excerpt: post.excerpt,
 		coverImage: post.coverImage,

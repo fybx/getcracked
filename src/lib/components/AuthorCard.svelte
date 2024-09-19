@@ -41,7 +41,7 @@
 	<img src={author.imageUrl} alt="{author.name}'s image" crossorigin="anonymous" />
 	<div class="author-info">
 		<h1>{author.name}</h1>
-		<p>Has {!author.count ? 0 : author.count} articles.</p>
+		<p>Has {!author.postCount ? 0 : author.postCount} articles.</p>
 		{#if author.links}
 			<nav>
 				{#each links as [key, value]}
