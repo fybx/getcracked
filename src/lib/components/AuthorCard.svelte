@@ -3,6 +3,7 @@
 	const links = Object.keys(author.links)
 		.sort()
 		.map((key) => [key, author.links[key]]);
+
 	const logoMap = {
 		github: '/ui/github.svg',
 		x: '/ui/x.svg',
@@ -11,15 +12,17 @@
 		email: '/ui/email.svg'
 	};
 
-	Object.keys(links).forEach((key) => {
-		if (key === 'x' || key === 'twitter') {
-			links[key] = `https://x.com/${links[key]}`;
-		} else if (key === 'email') {
-			links[key] = `mailto:${links[key]}`;
-		} else if (key === 'github') {
-			links[key] = `https://github.com/${links[key]}`;
+	links.forEach((l) => {
+		if (l[0] == 'x' || l[0] == 'twitter') {
+			l[1] = `https://x.com/${l[1]}`;
+		} else if (l[0] == 'email') {
+			l[1] = `mailto:${l[1]}`;
+		} else if (l[0] == 'github') {
+			l[1] = `https://github.com/${l[1]}`;
 		}
 	});
+
+	console.log(links);
 </script>
 
 <div class="author">
