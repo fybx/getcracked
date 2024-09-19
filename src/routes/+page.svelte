@@ -1,12 +1,13 @@
 <script>
-	import { siteTitle } from '$lib/config';
-
+	import Seo from 'sk-seo';
 	export let data;
 </script>
 
-<svelte:head>
-	<title>{siteTitle}</title>
-</svelte:head>
+<Seo
+	title="Home • getcracked"
+	description="Welcome to getcracked.wiki, where information has no bounds. Let's get cracked together!"
+	imageURL="https://getcracked.wiki/og.png"
+/>
 
 <article class="markdown">
 	<svelte:component this={data.index} />

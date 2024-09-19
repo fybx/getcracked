@@ -136,3 +136,12 @@ $font-size-decrease: 4px;
 hr.ui {
   border: 1px solid #229799;
 }
+
+#main .contained h1,
+#main .contained h2,
+#main .contained h3,
+#main .contained h4,
+#main .contained h5,
+#main .contained h6 {
+  margin-top: 0 !important;
+}

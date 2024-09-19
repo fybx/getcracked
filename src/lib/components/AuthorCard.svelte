@@ -23,23 +23,27 @@
 	});
 </script>
 
-<div class="author">
-	<img src={author.imageUrl} alt="{author.name}'s image" crossorigin="anonymous" />
-	<div class="author-info">
-		<h1>{author.name}</h1>
-		<p>
-			Has {author.postCount ? author.postCount : 0}
-			{author.postCount === 1 ? 'article' : 'articles'}.
-		</p>
-		{#if author.links}
-			<nav>
-				{#each links as [key, value]}
-					<a href={value}><img src={logoMap[key]} alt={key} /></a>
-				{/each}
-			</nav>
-		{/if}
+<a href="/authors/{author}">
+	<div class="author">
+		<img src={author.imageUrl} alt="{author.name}'s image" crossorigin="anonymous" />
+		<div class="author-info">
+			<h1>{author.name}</h1>
+			<p>
+				Has {author.postCount ? author.postCount : 0}
+				{author.postCount === 1 ? 'article' : 'articles'}.
+			</p>
+			{#if author.links}
+				<nav>
+					{#each links as [key, value]}
+						<a href={value} target="_blank" rel="noopener noreferrer"
+							><img src={logoMap[key]} alt={key} /></a
+						>
+					{/each}
+				</nav>
+			{/if}
+		</div>
 	</div>
-</div>
+</a>
 
 <style lang="scss">
 	.author {

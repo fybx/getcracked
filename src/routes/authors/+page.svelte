@@ -1,13 +1,14 @@
 <script>
 	import AuthorCard from '$lib/components/AuthorCard.svelte';
+	import Seo from 'sk-seo';
 	export let data;
 </script>
 
-<svelte:head>
-	<title>Authors • getcracked</title>
-	<!--TODO: add description -->
-	<meta data-key="description" name="description" content="" />
-</svelte:head>
+<Seo
+	title="Authors • getcracked"
+	description="Our hall of fame, thanks to our authors we have getcracked.wiki"
+	imageURL="https://getcracked.wiki/og.png"
+/>
 
 <h1>Authors</h1>
 
