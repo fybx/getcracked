@@ -21,8 +21,6 @@
 			l[1] = `https://github.com/${l[1]}`;
 		}
 	});
-
-	console.log(links);
 </script>
 
 <div class="author">

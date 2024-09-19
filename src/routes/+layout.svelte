@@ -79,7 +79,7 @@
 		.center {
 			padding-inline: 4rem;
 			padding-bottom: 60px; // this should follow the margin-top of h1 defined at global.scss
-			background-color: #00000030;
+			background-color: #00000060;
 			backdrop-filter: blur(4px);
 			-webkit-backdrop-filter: blur(4px);
 		}

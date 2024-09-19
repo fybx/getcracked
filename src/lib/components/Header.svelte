@@ -3,7 +3,7 @@
 </script>
 
 <header>
-	<a href="/" class="site-title"> getcracked.wiki </a>
+	<a href="/" class="site-title"> <img src="/ui/logomark.png" alt="getcracked.wiki" /> </a>
 
 	<NavItems />
 </header>
@@ -21,9 +21,11 @@
 	}
 
 	.site-title {
-		font-size: 2.5rem;
-		font-weight: bold;
-		color: #229799;
+		height: 2rem;
+
+		img {
+			height: 2rem;
+		}
 	}
 
 	@media (prefers-color-scheme: light) {
