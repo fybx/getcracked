@@ -19,4 +19,4 @@ want to share your insights on something you're good at and help others get crac
 1. pick your topic: whether it's a new skill like learning Haskell, job hunting tips, or anything else, we are open to your contribution.
 2. write and submit: we are open to contribution via PRs on [our GitHub repository](https://github.com/fybx/getcracked).
 3. wait a few hours: we'll review and merge your article to main branch.
-4. engage: join the community, offer advice, share the word on [X](), let's grow together!
+4. engage: join the community, offer advice, share the word on [X](https://x.com/intent/post?text=guys+you%27ve+to+check+getcracked.wiki+if+you+want+to+get+cracked%21+it%27s+the+next+big+thing%21%21%21+%23getcracked), let's grow together!
