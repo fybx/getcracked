@@ -51,7 +51,7 @@
 			<ul class="post-footer__categories">
 				{#each categories as category}
 					<li>
-						<a href="/articles/category/{category}/">
+						<a href="/tags/{category}/">
 							{category}
 						</a>
 					</li>
