@@ -2,6 +2,7 @@
 title: "Why getcracked.wiki?"
 date: "2024-09-18"
 updated: "2024-09-18"
+author: "yigid balaban"
 categories:
   - "meta"
 coverImage: ""

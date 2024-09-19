@@ -1,4 +1,5 @@
 <script>
+	import AuthorCard from '$lib/components/AuthorCard.svelte';
 	export let data;
 </script>
 
@@ -14,13 +15,7 @@
 
 <div class="container">
 	{#each data.authors as author}
-		<div class="author">
-			<img src={author.imageUrl} alt="{author.name}'s image" />
-			<div class="author-info">
-				<h1>{author.name}</h1>
-				<p>Has {author.count} articles.</p>
-			</div>
-		</div>
+		<AuthorCard {author} />
 	{/each}
 </div>
 
