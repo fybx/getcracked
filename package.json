@@ -21,6 +21,7 @@
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.1.0",
 		"sass": "^1.79.1",
+		"sk-seo": "^0.4.1",
 		"svelte": "^4.2.7",
 		"svelte-preprocess": "^5.1.4",
 		"vite": "^5.0.12"

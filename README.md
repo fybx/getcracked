@@ -30,5 +30,17 @@ the source code and the articles are openly available to anyone on [our GitHub r
 
 getcracked.wiki aims to achieve more than what Wikipedia has achieved. for this reason, we accept any knowledge to be added—from tutorials to answers for simple questions. getcracked.wiki accepts every bit of information, because any information is valuable.
 
-you can read more about the project [here](/articles/why-getcracked-wiki).
+## credits
+
+built by Yiğid BALABAN, <[fyb@fybx.dev][llmail]>
+
+[My Website][llwebsite] • [My Bento][llbento] • [X][llx] • [LinkedIn][lllinkedin]
+
+2024
+
+[llmail]: mailto:fyb@fybx.dev
+[llwebsite]: https://fybx.dev
+[llbento]: https://bento.me/balaban
+[llx]: https://x.com/fybalaban
+[lllinkedin]: https://linkedin.com/in/fybx
 

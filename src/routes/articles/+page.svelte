@@ -1,14 +1,16 @@
 <script>
 	import PostsList from '$lib/components/PostsList.svelte';
 	import Pagination from '$lib/components/Pagination.svelte';
+	import Seo from 'sk-seo';
 
 	export let data;
 </script>
 
-<svelte:head>
-	<title>Articles</title>
-	<meta data-key="description" name="description" content="TODO: update here" />
-</svelte:head>
+<Seo
+	title="Articles • getcracked"
+	description="All articles available on getcracked.wiki - for you!"
+	imageURL="https://getcracked.wiki/og.png"
+/>
 
 <h1>Articles</h1>
 

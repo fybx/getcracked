@@ -1,6 +1,7 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 <script>
 	import TagGallery from '$lib/components/TagGallery.svelte';
+	import Seo from 'sk-seo';
 
 	export let data;
 	let post = data.meta;
@@ -16,23 +17,19 @@
 		day: 'numeric'
 	});
 
-	const { title, excerpt, coverWidth, coverHeight, categories } = data.meta;
+	const { categories } = data.meta;
 	const { PostContent } = data;
 </script>
 
-<svelte:head>
-	<title>{post.title} getcracked</title>
-	<meta data-key="description" name="description" content={excerpt} />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={title} />
-	<meta name="twitter:title" content={title} />
-	<meta property="og:description" content={excerpt} />
-	<meta name="twitter:description" content={excerpt} />
-	<!-- <meta property="og:image" content="https://yourdomain.com/image_path" /> -->
-	<meta property="og:image:width" content={coverWidth} />
-	<meta property="og:image:height" content={coverHeight} />
-	<!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
+<Seo
+	title="{post.title} • getcracked"
+	description={post.excerpt}
+	keywords={post.categories.join(', ')}
+	imageURL="https://getcracked.wiki{post.coverImage}"
+	author={post.author}
+/>
 
+<svelte:head>
 	<link rel="stylesheet" href="/css/prism-one-light.css" media="(prefers-color-scheme: light)" />
 	<link rel="stylesheet" href="/css/prism-one-dark.css" media="(prefers-color-scheme: dark)" />
 </svelte:head>

@@ -44,6 +44,9 @@ importers:
       sass:
         specifier: ^1.79.1
         version: 1.79.1
+      sk-seo:
+        specifier: ^0.4.1
+        version: 0.4.1
       svelte:
         specifier: ^4.2.7
         version: 4.2.19
@@ -1098,6 +1101,9 @@ packages:
   sirv@2.0.4:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
     engines: {node: '>= 10'}
+
+  sk-seo@0.4.1:
+    resolution: {integrity: sha512-QIzy8PnHARfhOy7H38+pbu3O5i3INDob8G3J1dleH2k/M6hJ3fbh1jUHiRsuthfjSJGVsm2G+8ZlTdHF5ECmxg==}
 
   sorcery@0.11.1:
     resolution: {integrity: sha512-o7npfeJE6wi6J9l0/5LKshFzZ2rMatRiCDwYeDQaOzqdzRJwALhX7mk/A/ecg6wjMu7wdZbmXfD2S/vpOg0bdQ==}
@@ -2244,6 +2250,8 @@ snapshots:
       '@polka/url': 1.0.0-next.27
       mrmime: 2.0.0
       totalist: 3.0.1
+
+  sk-seo@0.4.1: {}
 
   sorcery@0.11.1:
     dependencies:
